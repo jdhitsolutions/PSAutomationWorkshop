@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest
+  schemaVersion="1.1"
+  templateType="Item" xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>myFunction</name>
+    <id>426daaff-5080-4e71-81d3-756c5afc9f43</id>
+    <version>1.0.0</version>
+    <title>myFunction</title>
+    <description>Function scaffolding</description>
+    <author>Art Deco</author>
+    <tags>function</tags>
+  </metadata>
+  <parameters>
+        <parameter name='Name' type='text' prompt='Enter the name of your function.'/>
+        <parameter name='Version' type='text' prompt='What is the function version?' default='0.1.0'/>
+        <parameter name='OutputType' type='text' prompt='What type of output is expected' default="[PSCustomObject]"/>
+        <parameter name="ShouldProcess" type="choice" prompt="Do you need to support -WhatIf ?>" default='1'>
+        <choice label="&amp;Yes" help="Adds SupportsShouldProcess" value="Yes" />
+        <choice label="&amp;No" help="Does not add SupportsShouldProcess" value="No" />
+      </parameter>
+      <parameter name="Help" type="choice" prompt="Do you need comment based help?" default='1'>
+        <choice label="&amp;Yes" help="Add comment based help outline" value="Yes" />
+        <choice label="&amp;No" help="Does not add comment based help" value="No" />
+        </parameter>
+      <parameter name="ComputerName" type="choice" prompt="Add a parameter for Computername?" default='0'>
+        <choice label="&amp;Yes" help="Adds a default parameter for computername" value="Yes" />
+        <choice label="&amp;No" help="Does not include computername parameter" value="No" />
+        </parameter>
+  </parameters>
+  <content>
+  <message>
+  
+  /|= Scaffolding your PowerShell function $PLASTER_PARAM_Name =|\
+  
+  </message>
+  
+      <templateFile source='function-template.ps1' destination='${PLASTER_PARAM_Name}.ps1'/>
+      <message>Your function, '$PLASTER_PARAM_Name', has been saved to '$PLASTER_DestinationPath\$PLASTER_PARAM_Name.ps1'</message>
+  </content>
+</plasterManifest>

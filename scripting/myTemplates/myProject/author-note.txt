@@ -1,0 +1,1 @@
+This version of the Plaster framework includes template files

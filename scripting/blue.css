@@ -1,0 +1,36 @@
+@charset "UTF-8"; 
+Body {
+font-family: "Tahoma", "Arial", "Helvetica", sans-serif;
+background-color:#F0E68C;
+}
+table
+{
+border-collapse:collapse;
+width:75%
+}
+td 
+{
+font-size:12pt;
+border:1px #0000FF solid;
+padding:2px 2px 2px 2px;
+}
+th 
+{
+font-size:14pt;
+text-align:center;
+padding-top:2px;
+padding-bottom:2px;
+padding-left:2px;
+padding-right:2px;
+background-color:#0000FF;
+color:#FFFFFF;
+}
+name tr
+{
+color:#000000;
+background-color:#0000FF;
+}
+h2
+{
+font-size:12pt;
+}

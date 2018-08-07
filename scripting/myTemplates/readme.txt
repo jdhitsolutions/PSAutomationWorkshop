@@ -1,0 +1,1 @@
+copy this folder to c:\program files\windowspowershell\modules

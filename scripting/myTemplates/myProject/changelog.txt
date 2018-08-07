@@ -1,0 +1,2 @@
+#Changelog for <%=$PLASTER_PARAM_ModuleName%> 
+

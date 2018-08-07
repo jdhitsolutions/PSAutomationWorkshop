@@ -114,7 +114,8 @@ get-command -Module plaster
 Get-PlasterTemplate
 
 help New-PlasterManifest
-$new = "c:\work\manifest.xml"
+#must be this file name
+$new = "c:\work\plastermanifest.xml"
 $params = @{
     Path = $new 
     TemplateName = "MyTool" 

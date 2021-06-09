@@ -45,6 +45,7 @@ $computers = "dom1","srv1","srv2","srv4"
 $data = foreach ($computer in $computers) {
   Get-ciminstance -ClassName Win32_OperatingSystem -ComputerName $computer
 }
+
 $data | Select @{Name="Computername";Expression={$_.CSName}},
  @{Name="OS";Expression={$_.Caption}},LastBootUptime,
  @{Name="Uptime";Expression = { (Get-Date) - $_.LastbootupTime}} |

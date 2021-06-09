@@ -58,8 +58,7 @@ version 1.1
         if ($credential) {
             Write-Verbose "[BEGIN] Adding credential $($credential.username)"
             $cimSess.Add("Credential",$Credential)
-        }
-        
+        }       
         
 
         if ($LogFailures) {
